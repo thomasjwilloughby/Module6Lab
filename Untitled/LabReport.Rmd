@@ -24,3 +24,14 @@ The distribution is left skewed. This indicates that there are few students givi
 ggplot(data = evals, aes(x = score)) +
   geom_histogram()
 ```
+
+### Exercise 3
+
+The maximum beauty average seems to decrease as age increases.
+
+```{r}
+ggplot(data = evals, aes(x = age, y = bty_avg)) +
+  geom_point()
+```
+
+
