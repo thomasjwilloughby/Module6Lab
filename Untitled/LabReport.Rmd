@@ -14,7 +14,7 @@ library(broom)
 
 ### Exercise 1
 
-This is an observation study. Given the study design we cannot answer the question posed, as in an obsrervational study one cannot determine causation only corolation.
+This is an observation study. Given the study design we cannot answer the question posed, as in an observational study one cannot determine causation only correlation.
 
 ### Exercise 2
 
