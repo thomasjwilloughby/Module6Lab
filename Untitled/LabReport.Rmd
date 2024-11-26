@@ -1,0 +1,22 @@
+---
+title: "Multiple linear regression"
+author: "Thomas Willoughby"
+date: "`r Sys.Date()`"
+output: openintro::lab_report
+---
+
+```{r load-packages, message=FALSE}
+library(tidyverse)
+library(openintro)
+library(GGally)
+library(broom)
+```
+
+### Exercise 1
+
+This is an observation study. Given the study design we cannot answer the question posed, as in an obsrervational study one cannot determine causation only corolation.
+
+### Exercise 2
+
+...
+
