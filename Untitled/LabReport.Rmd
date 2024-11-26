@@ -18,5 +18,9 @@ This is an observation study. Given the study design we cannot answer the questi
 
 ### Exercise 2
 
-...
+The distribution is left skewed. This indicates that there are few students giving the professors low rating. This is roughly what I would expect to see as there will always be some ratting at the lower end.
 
+```{r}
+ggplot(data = evals, aes(x = score)) +
+  geom_histogram()
+```
