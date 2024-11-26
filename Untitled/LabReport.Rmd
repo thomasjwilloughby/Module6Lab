@@ -34,4 +34,25 @@ ggplot(data = evals, aes(x = age, y = bty_avg)) +
   geom_point()
 ```
 
+### Exercise 4
 
+```{r}
+ggplot(data = evals, aes(x = bty_avg, y = score)) +
+  geom_jitter()
+
+ggplot(data = evals, aes(x = bty_avg, y = score)) +
+  geom_jitter()
+```
+
+### Exercise 5
+
+```{r}
+m_bty <- lm(score ~ bty_avg, data = evals)
+summary(m_bty)
+```
+
+$$
+\hat{score} = 0.06664\cdot \text{bty_avg} +3.88034
+$$
+
+The slope of 0.06664 indicates that for every increase of one in beauty average score goes up by 0.06664.
