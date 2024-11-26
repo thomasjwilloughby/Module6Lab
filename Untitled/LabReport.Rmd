@@ -76,3 +76,19 @@ evals_aug1 %>% ggplot(aes(x = .fitted, y = .resid)) +
 
 The scatterplot does not show any patterns.
 
+### Exercise 7
+
+```{r}
+m_bty_gen <- lm(score ~ bty_avg + gender, data = evals)
+tidy(m_bty_gen)
+
+
+evals_aug2 <- augment(m_bty_gen)
+
+evals_aug2 %>% ggplot(aes(x = .resid)) +
+  geom_histogram()
+
+evals_aug2 %>% ggplot(aes(x = .fitted, y = .resid)) +
+  geom_point()
+
+```
