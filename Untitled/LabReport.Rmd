@@ -47,6 +47,7 @@ ggplot(data = evals, aes(x = bty_avg, y = score)) +
 ### Exercise 5
 
 ```{r}
+# TODO: ^DO THIS^
 m_bty <- lm(score ~ bty_avg, data = evals)
 summary(m_bty)
 ```
@@ -55,4 +56,23 @@ $$
 \hat{score} = 0.06664\cdot \text{bty_avg} +3.88034
 $$
 
-The slope of 0.06664 indicates that for every increase of one in beauty average score goes up by 0.06664.
+The slope of 0.06664 indicates that for every increase of one in beauty average score goes up by 0.06664. Yes, the average beauty score is statisticaly significant predictor for score. However It is not a practicaly significant predictor.
+
+### Exercise 6
+
+```{r}
+evals_aug1 <- augment(m_bty)
+
+evals_aug1 %>% ggplot(aes(x = .resid)) +
+  geom_histogram()
+```
+
+The distribution of residuals does not approximately normal.
+
+```{r}
+evals_aug1 %>% ggplot(aes(x = .fitted, y = .resid)) +
+  geom_point()
+```
+
+The scatterplot does not show any patterns.
+
