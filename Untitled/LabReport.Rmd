@@ -107,6 +107,8 @@ m_full <- lm(score ~ rank + gender + ethnicity + language + age + cls_perc_eval
 tidy(m_full)
 ```
 
+### Exercise 13
 
+The coefficient of the ethnicity variable 0.1869649363	represents and increase of 0.1869649363 on average when the variable is "not minority" relative to the equivalent with ethnicity as "minority".
 
 
