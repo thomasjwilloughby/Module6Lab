@@ -91,4 +91,5 @@ evals_aug2 %>% ggplot(aes(x = .resid)) +
 evals_aug2 %>% ggplot(aes(x = .fitted, y = .resid)) +
   geom_point()
 
+# TODO: compltete exercies 8,9,10
 ```
