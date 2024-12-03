@@ -244,3 +244,6 @@ tidy(back_model)
 
 The characteristics of a highly rated professor would be, male, beautiful, not minority, teaching a one credit course, with a high percentage of students filling out the evaluation.
 
+### Exercise 19
+
+No, as the data used was from only one university. There could be many differences between institution that could affecte the result.
