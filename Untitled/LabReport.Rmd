@@ -216,3 +216,18 @@ back_model = lm(score ~ gender + ethnicity + cls_perc_eval + cls_credits + bty_a
 $$
 \hat{score} = 
 $$
+
+### Exercise 16
+
+```{r}
+back_aug <- augment(back_model)
+
+back_aug %>% ggplot(aes(x = .resid)) +
+  geom_histogram()
+
+back_aug %>% ggplot(aes(x = .fitted, y = .resid)) +
+  geom_point()
+
+```
+
+ANSWER THIS ONE BEFORE SUBMITION
