@@ -93,3 +93,6 @@ evals_aug2 %>% ggplot(aes(x = .fitted, y = .resid)) +
 
 # TODO: compltete exercies 8,9,10
 ```
+### Exercise 11
+
+I would expect the variable with the highest p-value to be cls_perc_eval as i would not expect the percentage of students that completed the evaluation would have a affect on the score of a professor.
