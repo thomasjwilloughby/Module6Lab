@@ -111,4 +111,98 @@ tidy(m_full)
 
 The coefficient of the ethnicity variable 0.1869649363	represents and increase of 0.1869649363 on average when the variable is "not minority" relative to the equivalent with ethnicity as "minority".
 
+### Exercise 14
 
+Removing $\texttt{cls_profs}$ increase the adjusted $R^2$ value the most.
+
+```{r}
+m_rank <- lm(score ~ gender + ethnicity + language + age + cls_perc_eval 
+             + cls_students + cls_level + cls_profs + cls_credits + bty_avg, data = evals)
+m_gender <- lm(score ~ rank + ethnicity + language + age + cls_perc_eval 
+             + cls_students + cls_level + cls_profs + cls_credits + bty_avg, data = evals)
+m_ethnicity <- lm(score ~ rank + gender  + language + age + cls_perc_eval 
+             + cls_students + cls_level + cls_profs + cls_credits + bty_avg, data = evals)
+m_language <- lm(score ~ rank + gender + ethnicity + age + cls_perc_eval 
+             + cls_students + cls_level + cls_profs + cls_credits + bty_avg, data = evals)
+m_age <- lm(score ~ rank + gender + ethnicity + language + cls_perc_eval 
+             + cls_students + cls_level + cls_profs + cls_credits + bty_avg, data = evals)
+m_clsperceval <- lm(score ~ rank + gender + ethnicity + language + age +  
+            cls_students + cls_level + cls_profs + cls_credits + bty_avg, data = evals)
+m_students <- lm(score ~ rank + gender + ethnicity + language + age + cls_perc_eval 
+             + cls_level + cls_profs + cls_credits + bty_avg, data = evals)
+
+m_level <- lm(score ~ rank + gender + ethnicity + language + age + cls_perc_eval 
+             + cls_students +  cls_profs + cls_credits + bty_avg, data = evals)
+
+m_profs <- lm(score ~ rank + gender + ethnicity + language + age + cls_perc_eval 
+             + cls_students + cls_level + cls_credits + bty_avg, data = evals)
+
+m_credits <- lm(score ~ rank + gender + ethnicity + language + age + cls_perc_eval 
+             + cls_students + cls_level + cls_profs + bty_avg, data = evals)
+
+m_btyavg <- lm(score ~ rank + gender + ethnicity + language + age + cls_perc_eval 
+             + cls_students + cls_level + cls_profs + cls_credits , data = evals)
+
+get_adj_r2 <- function(m_var) {
+  summary(m_var)$adj.r.squared
+}
+
+r2_rank <- get_adj_r2(m_rank)
+r2_gender <- get_adj_r2(m_gender)
+r2_ethnicity <- get_adj_r2(m_ethnicity)
+r2_language <- get_adj_r2(m_language)
+r2_age <- get_adj_r2(m_age)
+r2_clsperceval <- get_adj_r2(m_clsperceval)
+r2_students <- get_adj_r2(m_students)
+r2_level <- get_adj_r2(m_level)
+r2_profs <- get_adj_r2(m_profs)
+r2_btyavg <- get_adj_r2(m_btyavg)
+
+```
+
+```{r}
+r2_rank
+```
+
+```{r}
+r2_gender
+```
+
+```{r}
+r2_ethnicity
+```
+
+```{r}
+r2_language
+```
+
+```{r}
+r2_age
+```
+
+```{r}
+r2_clsperceval
+```
+
+```{r}
+r2_students
+```
+
+```{r}
+r2_level
+```
+
+```{r}
+r2_profs
+```
+
+```{r}
+r2_btyavg
+```
+The variable with the highest p-value is $\texttt{cls_profs}$
+
+```{r}
+tidy(m_profs)
+```
+
+The coefficients of the other explanatory variables didn't change significantly with the removal of $\texttt{cls_profs}$. What this indicates about of the co-linearity of the variables is that there was at least one co-linear variable.
