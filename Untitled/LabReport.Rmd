@@ -210,7 +210,7 @@ The coefficients of the other explanatory variables didn't change significantly 
 ### Exerise 15
 
 ```{r}
-# TODO: Finish
+back_model = lm(score ~ gender + ethnicity + cls_perc_eval + cls_credits + bty_avg, dat = evals)
 ```
 
 $$
