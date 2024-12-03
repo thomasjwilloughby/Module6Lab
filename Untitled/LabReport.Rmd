@@ -231,3 +231,7 @@ back_aug %>% ggplot(aes(x = .fitted, y = .resid)) +
 ```
 
 ANSWER THIS ONE BEFORE SUBMITION
+
+### Exercise 17
+
+Yes - we should be worried about independence as one professor can be teaching multiple courses and as much be recorded in multiple samples.
