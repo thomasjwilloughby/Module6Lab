@@ -206,3 +206,13 @@ tidy(m_profs)
 ```
 
 The coefficients of the other explanatory variables didn't change significantly with the removal of $\texttt{cls_profs}$. What this indicates about of the co-linearity of the variables is that there was at least one co-linear variable.
+
+### Exerise 15
+
+```{r}
+# TODO: Finish
+```
+
+$$
+\hat{score} = 
+$$
