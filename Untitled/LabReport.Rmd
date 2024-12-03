@@ -242,5 +242,5 @@ Yes - we should be worried about independence as one professor can be teaching m
 tidy(back_model)
 ```
 
-The characteristics of a highly rated professor would be, male, beautify, not minority, teaching a one credit course, with a high percentage of students filling out the evaluation.
+The characteristics of a highly rated professor would be, male, beautiful, not minority, teaching a one credit course, with a high percentage of students filling out the evaluation.
 
