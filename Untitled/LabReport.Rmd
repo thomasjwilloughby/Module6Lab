@@ -235,3 +235,12 @@ ANSWER THIS ONE BEFORE SUBMITION
 ### Exercise 17
 
 Yes - we should be worried about independence as one professor can be teaching multiple courses and as much be recorded in multiple samples.
+
+### Exercise 18
+
+```{r}
+tidy(back_model)
+```
+
+The characteristics of a highly rated professor would be, male, beautify, not minority, teaching a one credit course, with a high percentage of students filling out the evaluation.
+
